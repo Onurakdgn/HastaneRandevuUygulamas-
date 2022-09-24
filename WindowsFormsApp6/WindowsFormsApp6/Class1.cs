@@ -38,28 +38,11 @@ namespace WindowsFormsApp6
 
         public void dgv_yukle(DataGridView dgv)
         {
-            //bag.Open();
-            //string kayit = "SELECT * from randevular";
-            //SqlCommand komut = new SqlCommand(kayit,bag);
-            //SqlDataAdapter da = new SqlDataAdapter(komut);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //dgV.DataSource = dt;
-            //bag.Close();
-
-            //Mahmut Hocanın Attığı kısımdan aldım burada :D
             string sql = "select * from randevular";
             SqlDataAdapter da = new SqlDataAdapter(sql, bag);
             DataTable tablo = new DataTable();
             da.Fill(tablo);
             dgv.DataSource = tablo;
-            //dgv.Columns[3].HeaderText = "TARİH";
-            //dgv.Columns[2].HeaderText = "DOKTOR ADI";
-            //dgv.Columns[4].HeaderText = "SAAT";
-            //dgv.Columns[1].HeaderText = "HASTA ADI";
-            //dgv.Columns[0].HeaderText = "R.NO";
-            //dgv.Columns[4].Width = 60;
-            //dgv.Columns[0].Width = 60;
         }
             public void sil(int randevuno)
             {
